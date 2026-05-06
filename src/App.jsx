@@ -142,14 +142,14 @@ const App = () => {
         </div>
       </header>
 
-      {/* PHILOSOPHY */}
-      <section id="philosophy" className="py-24 md:py-48 bg-[#0A0A0A] px-6">
+      {/* PHILOSOPHY - CONDENSED PADDING */}
+      <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="shadow-2xl overflow-hidden">
             <img src={ASSETS.interiorReception} alt="Interior" className="w-full aspect-[4/5] object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
-            <h3 className="text-4xl md:text-6xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
+            <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
             <p className="text-stone-400 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
             <p className="text-stone-500 font-light leading-relaxed">
               At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
@@ -158,13 +158,13 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="py-24 md:py-48 bg-[#0F0F0F] px-6 relative border-y border-white/5">
+      {/* SERVICES - CONDENSED PADDING & SMALLER HEADERS */}
+      <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
         </div>
         <div className="max-w-[1800px] mx-auto relative z-10">
-          <h3 className="text-5xl md:text-7xl font-serif italic text-white mb-20 text-center lg:text-left">Curated.</h3>
+          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
               <div key={i} className="p-12 bg-[#0F0F0F] flex flex-col items-center text-center group hover:bg-white/[0.02] transition-all">
@@ -181,10 +181,10 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section id="experience" className="py-24 md:py-48 bg-[#0A0A0A] px-6">
+      {/* EXPERIENCE - CONDENSED PADDING & SMALLER HEADERS */}
+      <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
-          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-20 text-center">Voices.</h3>
+          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center">Voices.</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {ASSETS.testimonials.map((review, i) => (
               <div key={i} className="bg-white/[0.02] p-8 md:p-12 border border-white/5 hover:bg-white/[0.04] transition-all duration-700">
@@ -199,10 +199,10 @@ const App = () => {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section id="team" className="py-24 md:py-48 bg-[#0F0F0F] px-6 border-t border-white/5">
+      {/* TEAM - CONDENSED PADDING & SMALLER HEADERS */}
+      <section id="team" className="py-16 md:py-28 bg-[#0F0F0F] px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center mb-20">The Collective.</h3>
+          <h3 className="text-2xl md:text-4xl font-serif italic text-white text-center mb-16">The Collective.</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {ASSETS.team.map((member) => (
               <div key={member.id} className="group">
@@ -218,15 +218,15 @@ const App = () => {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <section id="contact" className="group contact-reveal relative py-48 md:py-72 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
+      {/* CONTACT SECTION - CONDENSED PADDING */}
+      <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
           src={ASSETS.interiorReception} 
           className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
           alt="Reception" 
         />
         <div className="relative z-10">
-          <h2 className="text-5xl md:text-8xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
+          <h2 className="text-4xl md:text-7xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
             <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
