@@ -85,7 +85,13 @@ const App = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 md:gap-8">
+            {/* SOCIAL ICONS RESTORED FOR DESKTOP */}
+            <div className="hidden lg:flex items-center gap-6 text-white/30">
+              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Icons.Instagram /></a>
+              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
+            </div>
+
             <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
@@ -143,7 +149,7 @@ const App = () => {
             <img src={ASSETS.interiorReception} alt="Interior" className="w-full aspect-[4/5] object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
-            <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
+            <h3 className="text-4xl md:text-6xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
             <p className="text-stone-400 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
             <p className="text-stone-500 font-light leading-relaxed">
               At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
@@ -152,7 +158,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES - FULL MENU RESTORED */}
       <section id="services" className="py-24 md:py-48 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
@@ -175,7 +181,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
+      {/* EXPERIENCE - TESTIMONIALS RESTORED */}
       <section id="experience" className="py-24 md:py-48 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
           <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-20 text-center">Voices.</h3>
@@ -193,7 +199,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* TEAM */}
+      {/* TEAM - BIOS RESTORED */}
       <section id="team" className="py-24 md:py-48 bg-[#0F0F0F] px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center mb-20">The Collective.</h3>
