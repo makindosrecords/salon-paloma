@@ -304,7 +304,7 @@ const App = () => {
 
         /* VERTICAL MOBILE ORIENTATION FIX (PORTRAIT) */
         @media (orientation: portrait) {
-          .hero-img { object-position: 95% center !important; }
+          .hero-img { object-position: 82% center !important; }
           .hero-text-box { max-width: 90% !important; margin-left: 0 !important; margin-bottom: 2rem !important; }
         }
 
