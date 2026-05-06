@@ -40,6 +40,7 @@ const Icons = {
   Menu: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>,
   X: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>,
   ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"></path></svg>,
+  ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
   Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
   Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4z" /></svg>
 };
@@ -81,7 +82,7 @@ const App = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-5 py-2 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
+            <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
             <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(true)}><Icons.Menu /></button>
@@ -100,7 +101,7 @@ const App = () => {
       )}
 
       {/* HERO SECTION - SPLIT FOR PORTRAIT / OVERLAY FOR LANDSCAPE */}
-      <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[64px] lg:pt-0">
+      <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[72px] lg:pt-0">
         
         {/* IMAGE CONTAINER: Focal point nudged up slightly (35%) to protect the head */}
         <div className="w-full h-[60vh] sm:h-[70vh] lg:absolute lg:inset-0 z-0">
@@ -120,12 +121,12 @@ const App = () => {
               Elevated <br /> 
               <span className="text-stone-500">Artistry.</span>
             </h1>
-            <p className="max-w-sm text-stone-400 text-sm md:text-base font-light leading-relaxed mb-8">
+            <p className="max-w-sm text-stone-400 text-sm md:text-base font-light leading-relaxed mb-10">
               Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
             </p>
-            <a href={CONFIG.bookingUrl} target="_blank" className="group flex items-center gap-6 text-[9px] tracking-[0.6em] uppercase font-black text-white hover:text-stone-400 transition-all">
+            <a href={CONFIG.bookingUrl} target="_blank" className="group inline-flex items-center gap-6 text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-black text-white hover:text-stone-400 transition-all border-b border-white/10 pb-2 hover:border-white">
               Reserve Experience 
-              <div className="w-12 h-[1px] bg-white/20 transition-all group-hover:w-20 group-hover:bg-white"></div>
+              <Icons.ArrowRight />
             </a>
           </div>
         </div>
