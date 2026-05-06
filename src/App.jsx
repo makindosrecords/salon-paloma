@@ -43,7 +43,7 @@ const Icons = {
   ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>,
   Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
   ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"></path></svg>,
-  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
+  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1 1.5-.7 1.7-1.5.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
 };
 
 const App = () => {
@@ -116,7 +116,7 @@ const App = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-[95%_center] lg:object-[85%_center]"
+            className="hero-img w-full h-full object-cover lg:object-[85%_center]"
             alt="Salon Paloma Hair Artistry"
           />
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent" />
@@ -300,6 +300,12 @@ const App = () => {
           .service-card:hover { background: rgba(255, 255, 255, 0.04); }
           .contact-reveal:hover .contact-bg-img { opacity: 0.6; }
           footer:hover .map-iframe { opacity: 1; }
+        }
+
+        /* VERTICAL MOBILE ORIENTATION FIX (PORTRAIT) */
+        @media (orientation: portrait) {
+          .hero-img { object-position: 88% center !important; }
+          .hero-text-box { max-width: 90% !important; margin-left: 0 !important; }
         }
 
         /* LANDSCAPE MOBILE FINAL FIX: AGGRESSIVE TYPOGRAPHY SCALING */
