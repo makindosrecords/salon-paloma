@@ -91,7 +91,7 @@ const App = () => {
               <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Instagram /></a>
               <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Yelp /></a>
             </div>
-            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-5 md:px-8 py-2.5 md:py-3.5 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
+            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="hidden lg:block bg-white text-black px-8 py-3.5 text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
               Book
             </a>
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
@@ -120,7 +120,7 @@ const App = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover brightness-[0.7] animate-slow-zoom object-[85%_center] lg:object-[75%_center]"
+            className="w-full h-full object-cover brightness-[0.7] animate-slow-zoom object-center lg:object-[75%_center]"
             alt="Editorial Artistry"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
