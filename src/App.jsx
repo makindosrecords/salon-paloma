@@ -116,20 +116,20 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - REFINED FOR MOBILE LANDSCAPE & VERTICAL FRAMING */}
+      {/* HERO SECTION - MAXIMIZED FRAMING FOR VERTICAL & LANDSCAPE */}
       <header className="relative h-[100svh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-[85%_center] lg:object-[85%_center]"
+            className="w-full h-full object-cover object-[92%_center] lg:object-[85%_center]"
             alt="Salon Paloma Hair Artistry"
           />
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/95 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-16 lg:items-center lg:pb-0">
-          <div className="hero-text-box max-w-xl bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group">
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-12 lg:items-center lg:pb-0">
+          <div className="hero-text-box max-w-[85%] sm:max-w-xl bg-black/10 backdrop-blur-[1px] border-l border-white/10 p-6 md:p-12 relative group">
             <h1 className="hero-title text-4xl md:text-[80px] leading-[0.9] font-serif italic mb-4 md:mb-6 text-white drop-shadow-sm">
               Elevated <br /> 
               <span className="text-stone-400">Artistry.</span>
@@ -311,7 +311,7 @@ const App = () => {
         @media (max-height: 500px) and (orientation: landscape) {
           .hero-title { font-size: 1.75rem !important; line-height: 1 !important; margin-bottom: 0.5rem !important; }
           .hero-description { display: none !important; }
-          .hero-text-box { padding: 1.5rem !important; border-width: 1px !important; margin-bottom: 0 !important; }
+          .hero-text-box { padding: 1.5rem !important; border-width: 1px !important; margin-bottom: 0 !important; max-width: 60% !important; }
           header { min-height: 320px !important; }
         }
 
