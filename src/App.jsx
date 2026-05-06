@@ -111,31 +111,35 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - PINNED TO SUBJECT FOR PORTRAIT ORIENTATION */}
-      <header className="relative h-[100svh] min-h-[360px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      {/* HERO SECTION - RESTRUCTURED FOR PORTRAIT VS LANDSCAPE */}
+      <header className="relative flex flex-col lg:block lg:h-[100svh] min-h-[500px] overflow-hidden bg-[#0A0A0A]">
+        {/* IMAGE CONTAINER */}
+        <div className="h-[65svh] lg:absolute lg:inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="hero-img w-full h-full object-cover lg:object-[85%_center]"
+            className="w-full h-full object-cover object-[95%_center] lg:object-[85%_center]"
             alt="Salon Paloma Hair Artistry"
           />
-          <div className="absolute inset-0 bg-black/20 lg:bg-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
+          {/* Desktop Gradient Protection */}
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-16 lg:items-center lg:pb-0">
-          <div className="hero-text-box max-w-xl bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group max-h-[75vh] overflow-hidden">
-            <h1 className="hero-title text-4xl sm:text-5xl md:text-[80px] leading-[0.9] font-serif italic mb-6 text-white drop-shadow-sm">
-              Elevated <br /> 
-              <span className="text-stone-400">Artistry.</span>
-            </h1>
-            <p className="hero-description max-w-sm text-stone-300 text-sm md:text-base font-light leading-relaxed mb-8 border-l border-stone-800/50 pl-6">
-              Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
-            </p>
-            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 text-[9px] tracking-[0.6em] uppercase font-black text-white hover:text-stone-400 transition-all">
-              Reserve Experience 
-              <div className="w-12 h-[1px] bg-white/20 transition-all group-hover:w-20 group-hover:bg-white"></div>
-            </a>
+        {/* CONTENT CONTAINER - STACKS BELOW ON MOBILE PORTRAIT, OVERLAYS ON DESKTOP/LANDSCAPE */}
+        <div className="relative lg:absolute lg:inset-0 z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 flex items-center lg:items-center">
+          <div className="w-full flex lg:block items-end pb-12 lg:pb-0">
+            <div className="hero-text-box w-full max-w-xl bg-[#0A0A0A] lg:bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group py-16 lg:py-12">
+              <h1 className="hero-title text-4xl sm:text-5xl md:text-[80px] leading-[0.9] font-serif italic mb-6 text-white drop-shadow-sm">
+                Elevated <br /> 
+                <span className="text-stone-400">Artistry.</span>
+              </h1>
+              <p className="hero-description max-w-sm text-stone-300 text-sm md:text-base font-light leading-relaxed mb-8 border-l border-stone-800/50 pl-6">
+                Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
+              </p>
+              <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 text-[9px] tracking-[0.6em] uppercase font-black text-white hover:text-stone-400 transition-all">
+                Reserve Experience 
+                <div className="w-12 h-[1px] bg-white/20 transition-all group-hover:w-20 group-hover:bg-white"></div>
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -302,18 +306,13 @@ const App = () => {
           footer:hover .map-iframe { opacity: 1; }
         }
 
-        /* VERTICAL MOBILE ORIENTATION FIX (PORTRAIT) */
-        @media (orientation: portrait) {
-          .hero-img { object-position: 98% center !important; }
-          .hero-text-box { max-width: 90% !important; margin-left: 0 !important; margin-bottom: 2rem !important; }
-        }
-
-        /* LANDSCAPE MOBILE FINAL FIX: AGGRESSIVE TYPOGRAPHY SCALING */
+        /* LANDSCAPE MOBILE FIX (PRESERVED) */
         @media (max-height: 500px) and (orientation: landscape) {
-          .hero-title { font-size: 1.5rem !important; line-height: 1 !important; margin-bottom: 0.25rem !important; }
+          header { display: block !important; height: 100svh !important; }
+          .hero-img { position: absolute !important; inset: 0 !important; }
+          .hero-text-box { position: absolute !important; bottom: 0 !important; left: 0 !important; max-width: 50% !important; background: rgba(0,0,0,0.2) !important; padding: 1.5rem !important; }
+          .hero-title { font-size: 1.75rem !important; margin-bottom: 0.5rem !important; }
           .hero-description { display: none !important; }
-          .hero-text-box { padding: 1rem !important; border-left-width: 2px !important; margin-bottom: 0 !important; max-width: 50% !important; bottom: 5% !important; }
-          header { min-height: 300px !important; }
         }
 
         html { scroll-behavior: smooth; }
