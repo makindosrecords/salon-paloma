@@ -111,7 +111,7 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - REFINED FOR AGGRESSIVE VERTICAL AND LANDSCAPE CENTERING */}
+      {/* HERO SECTION - PINNED TO SUBJECT FOR PORTRAIT ORIENTATION */}
       <header className="relative h-[100svh] min-h-[360px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
@@ -304,7 +304,7 @@ const App = () => {
 
         /* VERTICAL MOBILE ORIENTATION FIX (PORTRAIT) */
         @media (orientation: portrait) {
-          .hero-img { object-position: 82% center !important; }
+          .hero-img { object-position: 98% center !important; }
           .hero-text-box { max-width: 90% !important; margin-left: 0 !important; margin-bottom: 2rem !important; }
         }
 
