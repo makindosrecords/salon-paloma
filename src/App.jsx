@@ -43,7 +43,7 @@ const Icons = {
   ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>,
   Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
   ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"></path></svg>,
-  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1 1.5-.7 1.7-1.5.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
+  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1 1.5-.7 1.7-1.5.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
 };
 
 const App = () => {
@@ -91,7 +91,8 @@ const App = () => {
               <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Instagram /></a>
               <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Yelp /></a>
             </div>
-            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="hidden lg:block bg-white text-black px-8 py-3.5 text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
+            {/* BOOK BUTTON - Now persistent on mobile */}
+            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-5 md:px-8 py-2.5 md:py-3.5 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(true)}>
@@ -115,18 +116,19 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - REFINED FOR VERTICAL CLARITY */}
+      {/* HERO SECTION - REFINED FOR VERTICAL CLARITY & POSITIONING */}
       <header className="relative h-[100svh] min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover brightness-[0.7] animate-slow-zoom object-center lg:object-[75%_center]"
+            className="w-full h-full object-cover brightness-[0.7] object-[65%_15%] lg:object-[75%_center]"
             alt="Editorial Artistry"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
+          {/* Subtle gradient to anchor the text */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-center">
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-center lg:items-center items-end pb-20 lg:pb-0">
           <div className="max-w-xl bg-white/[0.01] backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group">
             <h1 className="text-5xl md:text-[80px] leading-[0.9] font-serif italic mb-6 text-white">
               Elevated <br /> 
@@ -165,7 +167,7 @@ const App = () => {
 
       {/* SERVICES */}
       <section id="services" className="py-32 md:py-52 bg-[#0F0F0F] px-6 md:px-8 relative border-y border-white/5 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.2] pointer-events-none">
+        <div className="absolute inset-0 opacity-[0.25] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
         </div>
         
@@ -174,9 +176,9 @@ const App = () => {
             <h3 className="text-6xl md:text-[8.5rem] font-serif italic text-white w-full">Curated.</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((category, i) => (
-              <div key={i} className="service-card flex flex-col items-center text-center">
+              <div key={i} className="service-card flex flex-col items-center text-center p-12 bg-[#0F0F0F]/95">
                 <h4 className="text-2xl md:text-3xl font-serif italic mb-8 text-white uppercase tracking-widest underline underline-offset-[12px] decoration-white/10">
                   {category.category}
                 </h4>
@@ -230,7 +232,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* CONTACT - RESTORED COLOR */}
+      {/* CONTACT */}
       <section id="contact" className="group contact-reveal relative py-48 md:py-72 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
           src={ASSETS.interiorReception} 
@@ -246,7 +248,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* FOOTER - RESTORED COLOR MAP */}
+      {/* FOOTER */}
       <footer className="bg-black pt-32 pb-16 px-6 md:px-8 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16 md:gap-24">
           <div className="space-y-8">
@@ -295,11 +297,7 @@ const App = () => {
       </footer>
 
       <style>{`
-        @keyframes slow-zoom { from { transform: scale(1); } to { transform: scale(1.05); } }
-        .animate-slow-zoom { animation: slow-zoom 45s linear infinite alternate; }
-        .service-card { position: relative; background: rgba(15, 15, 15, 0.95); padding: 3rem 2rem; transition: all 0.7s; min-height: 450px; }
-        
-        /* UPDATED: ALWAYS COLORFUL BUT INTERACTIVE */
+        .service-card { position: relative; transition: all 0.7s; min-height: 450px; }
         .contact-bg-img { filter: grayscale(0); opacity: 0.35; transform: scale(1); }
         .map-iframe { filter: grayscale(0); opacity: 0.7; }
 
