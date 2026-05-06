@@ -42,7 +42,7 @@ const Icons = {
   ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"></path></svg>,
   ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
   Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
-  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
+  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
 };
 
 const App = () => {
@@ -55,6 +55,10 @@ const App = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const navLinks = [
     { name: 'Philosophy', href: '#philosophy' },
     { name: 'Services', href: '#services' },
@@ -66,12 +70,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-[#FAF9F6] font-sans antialiased overflow-x-hidden relative">
       
-      {/* NAVIGATION - SLIMMER HEIGHT TO PREVENT CLIPPING */}
+      {/* NAVIGATION - SLIMMER HEIGHT */}
       <nav className={`fixed w-full z-[999] transition-all duration-500 ${
         scrolled ? 'bg-black/95 backdrop-blur-md py-2 shadow-2xl' : 'bg-black/80 lg:bg-transparent py-4'
       }`}>
         <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
-          <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="w-20 md:w-32">
+          <button onClick={scrollToTop} className="w-20 md:w-32">
             <img src={ASSETS.logoWhite} alt="Salon Paloma" className="w-full h-auto object-contain" />
           </button>
           
@@ -82,7 +86,6 @@ const App = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* LARGER BOOK BUTTON FOR MOBILE */}
             <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
@@ -105,7 +108,7 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - PRESERVED SPLIT LAYOUT */}
+      {/* HERO SECTION - PERSISTED SPLIT AND CENTERING */}
       <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[72px] lg:pt-0">
         <div className="w-full h-[60vh] sm:h-[70vh] lg:absolute lg:inset-0 z-0">
           <img 
@@ -118,14 +121,13 @@ const App = () => {
 
         <div className="relative lg:absolute lg:inset-0 z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 flex items-center h-auto lg:h-full py-12 lg:py-0 bg-[#0A0A0A] lg:bg-transparent">
           <div className="max-w-xl border-l border-stone-800 lg:border-white/10 pl-6 md:pl-12">
-            <h1 className="text-4xl sm:text-6xl lg:text-[90px] leading-[0.9] font-serif italic mb-6 text-white">
+            <h1 className="text-4xl sm:text-6xl lg:text-[80px] leading-[0.9] font-serif italic mb-6 text-white">
               Elevated <br /> 
               <span className="text-stone-500">Artistry.</span>
             </h1>
             <p className="max-w-sm text-stone-400 text-sm md:text-base font-light leading-relaxed mb-10">
               Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
             </p>
-            {/* IMPROVED CTA CLARITY */}
             <a href={CONFIG.bookingUrl} target="_blank" className="group inline-flex items-center gap-6 text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-black text-white hover:text-stone-400 transition-all border-b border-white/10 pb-2 hover:border-white">
               Reserve Experience 
               <Icons.ArrowRight />
@@ -141,7 +143,7 @@ const App = () => {
             <img src={ASSETS.interiorReception} alt="Interior" className="w-full aspect-[4/5] object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
-            <h3 className="text-4xl md:text-6xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
+            <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
             <p className="text-stone-400 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
             <p className="text-stone-500 font-light leading-relaxed">
               At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
@@ -150,13 +152,13 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES - FULL MENU RESTORED */}
+      {/* SERVICES */}
       <section id="services" className="py-24 md:py-48 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
         </div>
         <div className="max-w-[1800px] mx-auto relative z-10">
-          <h3 className="text-7xl md:text-[10rem] font-serif italic text-white mb-20 text-center lg:text-left">Curated.</h3>
+          <h3 className="text-5xl md:text-7xl font-serif italic text-white mb-20 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
               <div key={i} className="p-12 bg-[#0F0F0F] flex flex-col items-center text-center group hover:bg-white/[0.02] transition-all">
@@ -173,10 +175,10 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE - TESTIMONIALS RESTORED */}
+      {/* EXPERIENCE */}
       <section id="experience" className="py-24 md:py-48 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
-          <h3 className="text-5xl md:text-8xl font-serif italic text-white mb-20 text-center">Voices.</h3>
+          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-20 text-center">Voices.</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {ASSETS.testimonials.map((review, i) => (
               <div key={i} className="bg-white/[0.02] p-8 md:p-12 border border-white/5 hover:bg-white/[0.04] transition-all duration-700">
@@ -191,10 +193,10 @@ const App = () => {
         </div>
       </section>
 
-      {/* TEAM - BIOS RESTORED */}
+      {/* TEAM */}
       <section id="team" className="py-24 md:py-48 bg-[#0F0F0F] px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-4xl md:text-6xl font-serif italic text-white text-center mb-20">The Collective.</h3>
+          <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center mb-20">The Collective.</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {ASSETS.team.map((member) => (
               <div key={member.id} className="group">
@@ -210,8 +212,24 @@ const App = () => {
         </div>
       </section>
 
-      {/* FOOTER & MAP RESTORED */}
-      <footer id="contact" className="bg-black pt-32 pb-16 px-6 border-t border-white/5">
+      {/* CONTACT SECTION */}
+      <section id="contact" className="group contact-reveal relative py-48 md:py-72 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
+        <img 
+          src={ASSETS.interiorReception} 
+          className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
+          alt="Reception" 
+        />
+        <div className="relative z-10">
+          <h2 className="text-5xl md:text-8xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
+            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black pt-32 pb-16 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16">
           <div className="space-y-8">
             <div className="text-white text-3xl font-serif italic uppercase tracking-wider">Salon Paloma</div>
@@ -225,16 +243,27 @@ const App = () => {
           
           <div className="space-y-8">
             <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Studio Hours</h4>
-            <div className="text-stone-500 text-sm space-y-4">
-              <div className="flex justify-between border-b border-white/5 pb-2"><span>Tuesday — Friday</span><span className="text-white">10:00 — 5:00</span></div>
-              <div className="flex justify-between border-b border-white/5 pb-2"><span>Saturday</span><span className="text-white">9:00 — 5:00</span></div>
-              <div className="flex justify-between opacity-30"><span>Sun — Mon</span><span>Closed</span></div>
-            </div>
+            <ul className="space-y-4 text-[11px] md:text-sm font-light text-stone-500 uppercase tracking-wider">
+               {[
+                 { d: "Monday", h: "Closed", c: true },
+                 { d: "Tuesday", h: "10:00 AM — 5:00 PM" },
+                 { d: "Wednesday", h: "10:00 AM — 5:00 PM" },
+                 { d: "Thursday", h: "10:00 AM — 5:00 PM" },
+                 { d: "Friday", h: "10:00 AM — 5:00 PM" },
+                 { d: "Saturday", h: "9:00 AM — 5:00 PM" },
+                 { d: "Sunday", h: "Closed", c: true }
+               ].map((item, idx) => (
+                 <li key={idx} className="flex justify-between border-b border-stone-900/30 pb-2">
+                   <span>{item.d}</span>
+                   <span className={item.c ? "text-red-950 font-black" : "text-white"}>{item.h}</span>
+                 </li>
+               ))}
+             </ul>
           </div>
 
           <div className="space-y-8">
             <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Find Us</h4>
-            <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5 grayscale contrast-125 opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-1000">
+            <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5">
                <iframe
                   title="Map" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
                   width="100%" height="100%" style={{ border: 0 }}
@@ -253,6 +282,9 @@ const App = () => {
         ::-webkit-scrollbar { width: 0px; }
         @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
         .animate-fade-in { animation: fade-in 0.4s ease-out forwards; }
+        
+        .contact-bg-img { filter: grayscale(1); opacity: 0.35; transform: scale(1); }
+        .contact-reveal:hover .contact-bg-img { filter: grayscale(0); opacity: 0.6; transform: scale(1.05); }
       `}</style>
     </div>
   );
