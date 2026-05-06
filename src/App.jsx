@@ -86,7 +86,7 @@ const App = () => {
           </div>
 
           <div className="flex items-center gap-4 md:gap-8">
-            {/* SOCIAL ICONS RESTORED FOR DESKTOP */}
+            {/* SOCIAL ICONS FOR DESKTOP */}
             <div className="hidden lg:flex items-center gap-6 text-white/30">
               <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Icons.Instagram /></a>
               <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
@@ -114,9 +114,9 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - PERSISTED SPLIT AND CENTERING */}
+      {/* HERO SECTION - EXTENDED IMAGE HEIGHT FOR PORTRAIT */}
       <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[72px] lg:pt-0">
-        <div className="w-full h-[60vh] sm:h-[70vh] lg:absolute lg:inset-0 z-0">
+        <div className="w-full h-[75vh] sm:h-[85vh] lg:absolute lg:inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
             className="w-full h-full object-cover object-[center_35%]"
@@ -158,7 +158,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES - FULL MENU RESTORED */}
+      {/* SERVICES */}
       <section id="services" className="py-24 md:py-48 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
@@ -181,7 +181,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE - TESTIMONIALS RESTORED */}
+      {/* EXPERIENCE */}
       <section id="experience" className="py-24 md:py-48 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
           <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-20 text-center">Voices.</h3>
@@ -199,7 +199,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* TEAM - BIOS RESTORED */}
+      {/* TEAM */}
       <section id="team" className="py-24 md:py-48 bg-[#0F0F0F] px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center mb-20">The Collective.</h3>
@@ -234,19 +234,21 @@ const App = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER - SWAPPED MAP AND CONTACT INFO */}
       <footer className="bg-black pt-32 pb-16 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {/* COLUMN 1: MAP */}
           <div className="space-y-8">
-            <div className="text-white text-3xl font-serif italic uppercase tracking-wider">Salon Paloma</div>
-            <p className="text-stone-400 text-sm leading-relaxed">{CONFIG.address}</p>
-            <p className="text-white font-bold">{CONFIG.displayPhone}</p>
-            <div className="flex gap-6 text-stone-600">
-              <a href={CONFIG.instagramUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Instagram /></a>
-              <a href={CONFIG.yelpUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Yelp /></a>
+            <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Find Us</h4>
+            <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5">
+               <iframe
+                  title="Map" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
+                  width="100%" height="100%" style={{ border: 0 }}
+                ></iframe>
             </div>
           </div>
           
+          {/* COLUMN 2: HOURS (REMAINING IN CENTER) */}
           <div className="space-y-8">
             <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Studio Hours</h4>
             <ul className="space-y-4 text-[11px] md:text-sm font-light text-stone-500 uppercase tracking-wider">
@@ -267,16 +269,18 @@ const App = () => {
              </ul>
           </div>
 
+          {/* COLUMN 3: CONTACT INFORMATION (NAME, ADDR, SOCIALS) */}
           <div className="space-y-8">
-            <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Find Us</h4>
-            <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5">
-               <iframe
-                  title="Map" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
-                  width="100%" height="100%" style={{ border: 0 }}
-                ></iframe>
+            <div className="text-white text-3xl font-serif italic uppercase tracking-wider">Salon Paloma</div>
+            <p className="text-stone-400 text-sm leading-relaxed">{CONFIG.address}</p>
+            <p className="text-white font-bold">{CONFIG.displayPhone}</p>
+            <div className="flex gap-6 text-stone-600">
+              <a href={CONFIG.instagramUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Instagram /></a>
+              <a href={CONFIG.yelpUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Yelp /></a>
             </div>
           </div>
         </div>
+        
         <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.3em] uppercase font-bold text-stone-800">
            <p>© 2024 Salon Paloma. All Rights Reserved.</p>
            <p>San Carlos, California</p>
