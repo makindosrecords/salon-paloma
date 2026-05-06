@@ -43,7 +43,7 @@ const Icons = {
   ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>,
   Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
   ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"></path></svg>,
-  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
+  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2.8-.1 1.5-.7 1.7-1.5.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7-.8 0-1.5.5-1.8 1.2-.3.8-.2 1.8.2 2.5.2.2.3.4.5.5zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3zM10.1 5.3c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>
 };
 
 const App = () => {
@@ -76,7 +76,7 @@ const App = () => {
         scrolled ? 'bg-black/90 backdrop-blur-md py-3 shadow-2xl' : 'bg-transparent py-6 md:py-8'
       }`}>
         <div className="max-w-[1800px] mx-auto px-6 md:px-8 flex justify-between items-center">
-          {/* Logo is now prioritized and persistent */}
+          {/* Logo is prioritised and persistent */}
           <button onClick={scrollToTop} className="w-24 md:w-36 flex items-center cursor-pointer transition-opacity hover:opacity-80">
             <img src={ASSETS.logoWhite} alt="Salon Paloma" className="w-full h-full object-contain" />
           </button>
@@ -88,7 +88,6 @@ const App = () => {
           </div>
 
           <div className="flex items-center gap-4 md:gap-8">
-            {/* Social icons visible only on larger screens to prevent header clunkiness */}
             <div className="hidden lg:flex items-center gap-6 text-white/30">
               <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Icons.Instagram /></a>
               <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
@@ -119,20 +118,21 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - RECENTERED FRAMING */}
+      {/* HERO SECTION - REFINED LAYOUT FOR LANDSCAPE CLARITY */}
       <header className="relative h-[100svh] min-h-[650px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-center lg:object-right"
+            className="w-full h-full object-cover object-center lg:object-[85%_center]"
             alt="Salon Paloma Hair Artistry"
           />
-          {/* Subtle responsive gradients to protect text readability */}
+          {/* Subtle responsive gradients to protect text readability while keeping image clear */}
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/70 lg:via-transparent lg:to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-20 lg:items-center lg:pb-0">
+        {/* Text Overlay moved down in landscape (lg:pb-32) to clear the subject's face */}
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-20 lg:pb-32">
           <div className="max-w-xl bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group">
             <h1 className="text-5xl md:text-[80px] leading-[0.9] font-serif italic mb-6 text-white drop-shadow-sm">
               Elevated <br /> 
