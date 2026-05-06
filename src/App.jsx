@@ -65,12 +65,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-[#FAF9F6] font-sans antialiased overflow-x-hidden">
       
-      {/* NAVIGATION - PROTECTED Z-INDEX */}
+      {/* NAVIGATION - SLIMMER HEIGHT TO PREVENT CLIPPING */}
       <nav className={`fixed w-full z-[999] transition-all duration-500 ${
-        scrolled ? 'bg-black/95 backdrop-blur-md py-3 shadow-2xl' : 'bg-black/80 lg:bg-transparent py-6'
+        scrolled ? 'bg-black/95 backdrop-blur-md py-2 shadow-2xl' : 'bg-black/80 lg:bg-transparent py-4'
       }`}>
         <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
-          <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="w-24 md:w-36">
+          <button onClick={() => window.scrollTo({top:0, behavior:'smooth'})} className="w-20 md:w-32">
             <img src={ASSETS.logoWhite} alt="Salon Paloma" className="w-full h-auto object-contain" />
           </button>
           
@@ -81,7 +81,7 @@ const App = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-6 py-2.5 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
+            <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-5 py-2 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all">
               Book
             </a>
             <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(true)}><Icons.Menu /></button>
@@ -100,13 +100,13 @@ const App = () => {
       )}
 
       {/* HERO SECTION - SPLIT FOR PORTRAIT / OVERLAY FOR LANDSCAPE */}
-      <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[80px] lg:pt-0">
+      <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[64px] lg:pt-0">
         
-        {/* IMAGE CONTAINER: She is CENTERED in the photo, so we use object-center */}
+        {/* IMAGE CONTAINER: Focal point nudged up slightly (35%) to protect the head */}
         <div className="w-full h-[60vh] sm:h-[70vh] lg:absolute lg:inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[center_35%]"
             alt="Salon Paloma Hair Artistry"
           />
           {/* Desktop Overlay Protection */}
