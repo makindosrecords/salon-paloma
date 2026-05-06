@@ -76,7 +76,6 @@ const App = () => {
         scrolled ? 'bg-black/90 backdrop-blur-md py-3 shadow-2xl' : 'bg-transparent py-6 md:py-8'
       }`}>
         <div className="max-w-[1800px] mx-auto px-6 md:px-8 flex justify-between items-center">
-          {/* Logo is prioritized and persistent */}
           <button onClick={scrollToTop} className="w-24 md:w-36 flex items-center cursor-pointer transition-opacity hover:opacity-80">
             <img src={ASSETS.logoWhite} alt="Salon Paloma" className="w-full h-full object-contain" />
           </button>
@@ -93,7 +92,6 @@ const App = () => {
               <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
             </div>
 
-            {/* Persistent Book button on all devices */}
             <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-5 md:px-8 py-2.5 md:py-3.5 text-[8px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
@@ -118,32 +116,30 @@ const App = () => {
         </div>
       )}
 
-      {/* HERO SECTION - REFINED LAYOUT FOR LANDSCAPE CLARITY */}
-      <header className="relative h-[100svh] min-h-[450px] lg:min-h-[650px] flex items-center overflow-hidden">
+      {/* HERO SECTION - REFINED FOR MOBILE LANDSCAPE & VERTICAL FRAMING */}
+      <header className="relative h-[100svh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-[90%_center] lg:object-[85%_center]"
+            className="w-full h-full object-cover object-[85%_center] lg:object-[85%_center]"
             alt="Salon Paloma Hair Artistry"
           />
-          {/* Subtle responsive gradients to protect text readability while keeping image clear */}
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90 lg:bg-gradient-to-r lg:from-black/80 lg:via-black/10 lg:to-transparent" />
         </div>
 
-        {/* Text Overlay positioned to avoid face in landscape (lg:pb-32, max-w-xs on mobile landscape height) */}
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-12 sm:pb-20 lg:pb-32">
-          <div className="max-w-xs sm:max-w-md lg:max-w-xl bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group">
-            <h1 className="text-4xl sm:text-5xl md:text-[80px] leading-[0.9] font-serif italic mb-4 sm:mb-6 text-white drop-shadow-sm">
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-8 h-full flex items-end pb-16 lg:items-center lg:pb-0">
+          <div className="hero-text-box max-w-xl bg-black/10 backdrop-blur-[2px] border-l border-white/10 p-6 md:p-12 relative group">
+            <h1 className="hero-title text-4xl md:text-[80px] leading-[0.9] font-serif italic mb-4 md:mb-6 text-white drop-shadow-sm">
               Elevated <br /> 
               <span className="text-stone-400">Artistry.</span>
             </h1>
-            <p className="max-w-[240px] sm:max-w-sm text-stone-300 text-xs sm:text-sm md:text-base font-light leading-relaxed mb-6 sm:mb-8 border-l border-stone-800/50 pl-4 sm:pl-6">
+            <p className="hero-description max-w-sm text-stone-300 text-sm md:text-base font-light leading-relaxed mb-6 md:mb-8 border-l border-stone-800/50 pl-6">
               Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
             </p>
-            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 sm:gap-6 text-[8px] sm:text-[9px] tracking-[0.6em] uppercase font-black text-white hover:text-stone-400 transition-all">
+            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 text-[9px] tracking-[0.6em] uppercase font-black text-white hover:text-stone-400 transition-all">
               Reserve Experience 
-              <div className="w-8 sm:w-12 h-[1px] bg-white/20 transition-all group-hover:w-20 group-hover:bg-white"></div>
+              <div className="w-12 h-[1px] bg-white/20 transition-all group-hover:w-20 group-hover:bg-white"></div>
             </a>
           </div>
         </div>
@@ -309,6 +305,14 @@ const App = () => {
           .service-card:hover { background: rgba(255, 255, 255, 0.04); }
           .contact-reveal:hover .contact-bg-img { opacity: 0.6; }
           footer:hover .map-iframe { opacity: 1; }
+        }
+
+        /* LANDSCAPE MOBILE FIX: SHORT SCREEN LOGIC */
+        @media (max-height: 500px) and (orientation: landscape) {
+          .hero-title { font-size: 1.75rem !important; line-height: 1 !important; margin-bottom: 0.5rem !important; }
+          .hero-description { display: none !important; }
+          .hero-text-box { padding: 1.5rem !important; border-width: 1px !important; margin-bottom: 0 !important; }
+          header { min-height: 320px !important; }
         }
 
         html { scroll-behavior: smooth; }
