@@ -13,7 +13,7 @@ const CONFIG = {
 };
 
 /**
- * ASSET PATHS - Updated to reflect /public/images/ directory
+ * ASSET PATHS - All files located in /public/images/
  */
 const ASSETS = {
   logoWhite: "/images/Paloma_Logo_white.webp",
@@ -21,7 +21,7 @@ const ASSETS = {
   interiorReception: "/images/IMG_5785.webp",
   marbleTexture: "/images/rawpixel-557126-unsplash.webp",
   philosophyImg: "/images/o (8).jpg",
-  contactImg: "/images/o (2).jpg",
+  contactImg: "/images/IMG_5785.webp", // Reverted to original reception shot
   serviceImages: [
     "/images/o (4).jpg", 
     "/images/o (7).jpg", 
@@ -105,8 +105,8 @@ const App = () => {
 
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden lg:flex items-center gap-6 text-white/30">
-              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Instagram /></a>
-              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Yelp /></a>
+              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Icons.Instagram /></a>
+              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
             </div>
             <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
@@ -174,7 +174,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES - BALANCED TYPOGRAPHY */}
       <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
@@ -183,14 +183,16 @@ const App = () => {
           <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
-              <div key={i} className="relative group overflow-hidden min-h-[450px] flex flex-col items-center justify-center text-center p-12 bg-[#0F0F0F]">
-                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" />
-                <div className="relative z-10">
-                  <h4 className="text-xl font-serif italic mb-8 text-white uppercase tracking-widest underline underline-offset-[12px] decoration-white/10">{cat.category}</h4>
-                  <ul className="space-y-4 mb-10 text-stone-500 font-light">
+              <div key={i} className="relative group overflow-hidden min-h-[500px] flex flex-col items-center justify-between text-center p-12 bg-[#0F0F0F]">
+                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-[0.12] group-hover:opacity-25 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" />
+                <div className="relative z-10 w-full h-full flex flex-col items-center justify-between">
+                  <h4 className="text-xl md:text-2xl font-serif italic text-white tracking-widest uppercase mb-8">
+                    {cat.category}
+                  </h4>
+                  <ul className="space-y-4 mb-10 text-stone-300 font-light text-sm md:text-base">
                     {cat.items.map((it) => <li key={it}>{it}</li>)}
                   </ul>
-                  <a href={CONFIG.bookingUrl} target="_blank" className="flex items-center text-[8px] tracking-widest uppercase font-bold text-stone-600 group-hover:text-white transition-all">
+                  <a href={CONFIG.bookingUrl} target="_blank" className="flex items-center text-[9px] tracking-widest uppercase font-bold text-stone-400 group-hover:text-white transition-all">
                     Consultation <Icons.ChevronRight />
                   </a>
                 </div>
@@ -245,12 +247,12 @@ const App = () => {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT SECTION - REVERTED IMAGE */}
       <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
           src={ASSETS.contactImg} 
           className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
-          alt="Artistry Sanctuary" 
+          alt="Reception" 
         />
         <div className="relative z-10">
           <h2 className="text-4xl md:text-7xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
