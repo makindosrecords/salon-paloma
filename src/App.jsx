@@ -144,7 +144,7 @@ const App = () => {
 
         <div className="relative lg:absolute lg:inset-0 z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 flex items-center h-auto lg:h-full py-12 lg:py-0 bg-[#0A0A0A] lg:bg-transparent">
           <div className="max-w-xl border-l border-stone-800 lg:border-white/10 pl-6 md:pl-12">
-            <h1 className="text-4xl sm:text-6xl lg:text-[80px] leading-[0.9] font-serif italic mb-6 text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-[72px] leading-[0.9] font-serif italic mb-6 text-white">
               Elevated <br /> 
               <span className="text-stone-500">Artistry.</span>
             </h1>
@@ -159,14 +159,14 @@ const App = () => {
         </div>
       </header>
 
-      {/* PHILOSOPHY - FEATURING ARCHITECTURAL SHOT 32.jpg */}
+      {/* PHILOSOPHY */}
       <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
             <img src={ASSETS.philosophyImg} alt="Salon Paloma Artistry" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
-            <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
+            <h3 className="text-2xl md:text-4xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
             <p className="text-stone-400 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
             <p className="text-stone-500 font-light leading-relaxed">
               At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
@@ -181,7 +181,7 @@ const App = () => {
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
         </div>
         <div className="max-w-[1800px] mx-auto relative z-10">
-          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
+          <h3 className="text-3xl md:text-5xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
               <div key={i} className="relative group overflow-hidden min-h-[500px] flex flex-col items-center justify-between text-center p-12 bg-[#0F0F0F]">
@@ -203,14 +203,11 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE - ADDED ATMOSPHERE MOOD IMAGE 31.jpg */}
+      {/* EXPERIENCE - REFINED HEADING AND REMOVED CIRCLE IMAGE */}
       <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
-          <div className="flex flex-col items-center mb-16 gap-8">
-            <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10 opacity-60">
-              <img src={ASSETS.moodImg} alt="" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-4xl md:text-6xl font-serif italic text-white text-center">Voices.</h3>
+          <div className="flex flex-col items-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center">Voices.</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {ASSETS.testimonials.map((review, i) => (
@@ -237,7 +234,7 @@ const App = () => {
       {/* TEAM */}
       <section id="team" className="py-16 md:py-28 bg-[#0F0F0F] px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl md:text-4xl font-serif italic text-white text-center mb-16">The Collective.</h3>
+          <h3 className="text-xl md:text-3xl font-serif italic text-white text-center mb-16">The Collective.</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {ASSETS.team.map((member) => (
               <div key={member.id} className="group">
@@ -253,7 +250,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* CONTACT SECTION - FEATURING RECEPTION DESK 33.jpg */}
+      {/* CONTACT SECTION */}
       <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
           src={ASSETS.contactImg} 
@@ -261,7 +258,7 @@ const App = () => {
           alt="Reception Sanctuary" 
         />
         <div className="relative z-10">
-          <h2 className="text-4xl md:text-7xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
+          <h2 className="text-3xl md:text-6xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
             <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
@@ -272,6 +269,7 @@ const App = () => {
       {/* FOOTER */}
       <footer className="bg-black pt-32 pb-16 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {/* COLUMN 1: MAP */}
           <div className="space-y-8">
             <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Find Us</h4>
             <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5">
@@ -282,6 +280,7 @@ const App = () => {
             </div>
           </div>
           
+          {/* COLUMN 2: HOURS */}
           <div className="space-y-8">
             <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Studio Hours</h4>
             <ul className="space-y-4 text-[11px] md:text-sm font-light text-stone-500 uppercase tracking-wider">
@@ -302,6 +301,7 @@ const App = () => {
              </ul>
           </div>
 
+          {/* COLUMN 3: CONTACT INFORMATION */}
           <div className="space-y-8">
             <div className="text-white text-3xl font-serif italic uppercase tracking-wider">Salon Paloma</div>
             <p className="text-stone-400 text-sm leading-relaxed">{CONFIG.address}</p>
