@@ -12,11 +12,22 @@ const CONFIG = {
   address: "538 El Camino Real, Suite A, San Carlos, CA 94070"
 };
 
+/**
+ * ASSET PATHS - Updated to reflect /public/images/ directory
+ */
 const ASSETS = {
-  logoWhite: "Paloma_Logo_white.webp",
-  heroLady: "SalonPaloma_hero_bg_04.webp",
-  interiorReception: "IMG_5785.webp",
-  marbleTexture: "rawpixel-557126-unsplash.webp",
+  logoWhite: "/images/Paloma_Logo_white.webp",
+  heroLady: "/images/SalonPaloma_hero_bg_04.webp",
+  interiorReception: "/images/IMG_5785.webp",
+  marbleTexture: "/images/rawpixel-557126-unsplash.webp",
+  philosophyImg: "/images/o (8).jpg",
+  contactImg: "/images/o (2).jpg",
+  serviceImages: [
+    "/images/o (4).jpg", 
+    "/images/o (7).jpg", 
+    "/images/o (6).jpg", 
+    "/images/o (1).jpg"
+  ],
   team: [
     { id: 1, name: "Paloma", role: "Founder & Lead Stylist", bio: "Defining the San Carlos aesthetic through precision and bespoke color." },
     { id: 2, name: "[Name]", role: "Senior Stylist", bio: "Specializing in architectural silhouettes and lived-in layers." },
@@ -94,10 +105,9 @@ const App = () => {
 
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden lg:flex items-center gap-6 text-white/30">
-              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram"><Icons.Instagram /></a>
-              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Yelp"><Icons.Yelp /></a>
+              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Instagram /></a>
+              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Icons.Yelp /></a>
             </div>
-
             <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
@@ -126,7 +136,7 @@ const App = () => {
           <img 
             src={ASSETS.heroLady} 
             className="w-full h-full object-cover object-[center_35%]"
-            alt="Salon Paloma Hair Artistry"
+            alt="Salon Paloma"
           />
           <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
         </div>
@@ -151,8 +161,8 @@ const App = () => {
       {/* PHILOSOPHY */}
       <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-          <div className="shadow-2xl overflow-hidden">
-            <img src={ASSETS.interiorReception} alt="Interior" className="w-full aspect-[4/5] object-cover transition-transform duration-1000 hover:scale-105" />
+          <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
+            <img src={ASSETS.philosophyImg} alt="Salon Paloma Sanctuary" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
             <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
@@ -173,21 +183,24 @@ const App = () => {
           <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
-              <div key={i} className="p-12 bg-[#0F0F0F] flex flex-col items-center text-center group hover:bg-white/[0.02] transition-all">
-                <h4 className="text-xl font-serif italic mb-8 text-white uppercase tracking-widest underline underline-offset-[12px] decoration-white/10">{cat.category}</h4>
-                <ul className="space-y-4 mb-10 text-stone-500 font-light">
-                  {cat.items.map((it) => <li key={it}>{it}</li>)}
-                </ul>
-                <a href={CONFIG.bookingUrl} target="_blank" className="mt-auto flex items-center text-[8px] tracking-widest uppercase font-bold text-stone-600 group-hover:text-white transition-all">
-                  Consultation <Icons.ChevronRight />
-                </a>
+              <div key={i} className="relative group overflow-hidden min-h-[450px] flex flex-col items-center justify-center text-center p-12 bg-[#0F0F0F]">
+                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" />
+                <div className="relative z-10">
+                  <h4 className="text-xl font-serif italic mb-8 text-white uppercase tracking-widest underline underline-offset-[12px] decoration-white/10">{cat.category}</h4>
+                  <ul className="space-y-4 mb-10 text-stone-500 font-light">
+                    {cat.items.map((it) => <li key={it}>{it}</li>)}
+                  </ul>
+                  <a href={CONFIG.bookingUrl} target="_blank" className="flex items-center text-[8px] tracking-widest uppercase font-bold text-stone-600 group-hover:text-white transition-all">
+                    Consultation <Icons.ChevronRight />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* EXPERIENCE - STARS AND YELP LINK ADDED */}
+      {/* EXPERIENCE */}
       <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
           <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center">Voices.</h3>
@@ -235,9 +248,9 @@ const App = () => {
       {/* CONTACT SECTION */}
       <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
-          src={ASSETS.interiorReception} 
+          src={ASSETS.contactImg} 
           className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
-          alt="Reception" 
+          alt="Artistry Sanctuary" 
         />
         <div className="relative z-10">
           <h2 className="text-4xl md:text-7xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
