@@ -20,8 +20,9 @@ const ASSETS = {
   heroLady: "/images/SalonPaloma_hero_bg_04.webp",
   interiorReception: "/images/IMG_5785.webp",
   marbleTexture: "/images/rawpixel-557126-unsplash.webp",
-  philosophyImg: "/images/o (8).jpg",
-  contactImg: "/images/IMG_5785.webp", // Reverted to original reception shot
+  philosophyImg: "/images/32.jpg", // Professional architectural shot of stations
+  contactImg: "/images/33.jpg",    // Reception desk with illuminated logo
+  moodImg: "/images/31.jpg",       // Motivational poster & plant for atmosphere
   serviceImages: [
     "/images/o (4).jpg", 
     "/images/o (7).jpg", 
@@ -158,11 +159,11 @@ const App = () => {
         </div>
       </header>
 
-      {/* PHILOSOPHY */}
+      {/* PHILOSOPHY - FEATURING ARCHITECTURAL SHOT 32.jpg */}
       <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
-            <img src={ASSETS.philosophyImg} alt="Salon Paloma Sanctuary" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
+            <img src={ASSETS.philosophyImg} alt="Salon Paloma Artistry" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
           </div>
           <div className="space-y-10">
             <h3 className="text-3xl md:text-5xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
@@ -174,7 +175,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* SERVICES - BALANCED TYPOGRAPHY */}
+      {/* SERVICES */}
       <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
           <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
@@ -202,10 +203,15 @@ const App = () => {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
+      {/* EXPERIENCE - ADDED ATMOSPHERE MOOD IMAGE 31.jpg */}
       <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-[1800px] mx-auto">
-          <h3 className="text-4xl md:text-6xl font-serif italic text-white mb-16 text-center">Voices.</h3>
+          <div className="flex flex-col items-center mb-16 gap-8">
+            <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10 opacity-60">
+              <img src={ASSETS.moodImg} alt="" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-4xl md:text-6xl font-serif italic text-white text-center">Voices.</h3>
+          </div>
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {ASSETS.testimonials.map((review, i) => (
               <div key={i} className="bg-white/[0.02] p-8 md:p-12 border border-white/5 hover:bg-white/[0.04] transition-all duration-700">
@@ -247,12 +253,12 @@ const App = () => {
         </div>
       </section>
 
-      {/* CONTACT SECTION - REVERTED IMAGE */}
+      {/* CONTACT SECTION - FEATURING RECEPTION DESK 33.jpg */}
       <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
         <img 
           src={ASSETS.contactImg} 
           className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
-          alt="Reception" 
+          alt="Reception Sanctuary" 
         />
         <div className="relative z-10">
           <h2 className="text-4xl md:text-7xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
