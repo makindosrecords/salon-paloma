@@ -10,12 +10,10 @@ const CONFIG = {
   instagramUrl: "https://www.instagram.com/thesalonpaloma/",
   phoneNumber: "6502327108",
   displayPhone: "650.232.7108",
-  address: "538 El Camino Real, Suite A, San Carlos, CA 94070"
+  address: "538 El Camino Real, Suite A, San Carlos, CA 94070",
+  description: "Salon Paloma in San Carlos offers elevated hair artistry, precision cuts, and bespoke color rituals in a New York-inspired sanctuary."
 };
 
-/**
- * ASSET PATHS - All files located in /public/images/
- */
 const ASSETS = {
   logoWhite: "/images/Paloma_Logo_white.webp",
   heroLady: "/images/SalonPaloma_hero_bg_04.webp",
@@ -50,13 +48,13 @@ const ASSETS = {
 };
 
 const Icons = {
-  Menu: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>,
-  X: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>,
-  ChevronRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"></path></svg>,
-  ArrowRight: () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
-  Instagram: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
-  Yelp: () => <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>,
-  Star: () => <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+  Menu: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>,
+  X: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>,
+  ChevronRight: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m9 18 6-6-6-6"></path></svg>,
+  ArrowRight: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>,
+  Instagram: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>,
+  Yelp: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M19.7 13c0 .8-.5 1.5-1.2 1.8-.8.3-1.8.2-2.5-.2-.5-.3-.9-.7-1.1-1.2-.2-.5-.3-1-.2-1.5.1-.8.7-1.5 1.5-1.7.8-.2 1.7 0 2.3.6.4.4.7.9.7 1.4zm-7.6-3.8c.8 0 1.5.5 1.8 1.2.3.8.2 1.8-.2 2.5-.3.5-.7.9-1.2 1.1-.5.2-1 .3-1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7.6-2.3.4-.4.9-.7 1.4-.7zm-4.3 8c.3.5.7.9 1.2 1.1.5.2 1 .3 1.5.2-.8-.1-1.5-.7-1.7-1.5-.2-.8 0-1.7-.6-2.3-.4-.4-.9-.7-1.4-.7zm11.1-8.5c-.8.1-1.5.7-1.7 1.5-.2.8 0 1.7.6 2.3.4.4.9.7 1.4.7.8 0 1.5-.5 1.8-1.2.3-.8.2-1.8-.2-2.5-.3-.5-.7-.9-1.2-1.1-.3-.1-.5-.1-.7.3z" /></svg>,
+  Star: () => <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
 };
 
 const App = () => {
@@ -64,12 +62,21 @@ const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    // SEO: Inject Meta Description
+    const metaDesc = document.createElement('meta');
+    metaDesc.name = "description";
+    metaDesc.content = CONFIG.description;
+    document.head.appendChild(metaDesc);
+
     const handleScroll = () => {
         if (window.scrollY > 50) setScrolled(true);
         else setScrolled(false);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.head.removeChild(metaDesc);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -85,7 +92,7 @@ const App = () => {
   ];
 
   const StarRating = () => (
-    <div className="flex gap-1 text-stone-300 mb-4">
+    <div className="flex gap-1 text-stone-200 mb-4" aria-label="5 star rating">
       <Icons.Star /><Icons.Star /><Icons.Star /><Icons.Star /><Icons.Star />
     </div>
   );
@@ -98,8 +105,8 @@ const App = () => {
         scrolled ? 'bg-black/95 backdrop-blur-md py-2 shadow-2xl' : 'bg-black/80 lg:bg-transparent py-4'
       }`}>
         <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
-          <button onClick={scrollToTop} className="w-20 md:w-32">
-            <img src={ASSETS.logoWhite} alt="Salon Paloma" className="w-full h-auto object-contain" />
+          <button onClick={scrollToTop} className="w-20 md:w-32" aria-label="Salon Paloma Home">
+            <img src={ASSETS.logoWhite} alt="Salon Paloma Logo" className="w-full h-auto object-contain" />
           </button>
           
           <div className="hidden lg:flex space-x-12 text-[9px] tracking-[0.6em] uppercase font-bold text-white/40">
@@ -116,171 +123,173 @@ const App = () => {
             <a href={CONFIG.bookingUrl} target="_blank" className="bg-white text-black px-7 py-3.5 md:px-8 md:py-2.5 text-[10px] md:text-[9px] tracking-[0.3em] uppercase font-black hover:bg-stone-300 transition-all active:scale-95">
               Book
             </a>
-            <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(true)}><Icons.Menu /></button>
+            <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(true)} aria-label="Open Mobile Menu"><Icons.Menu /></button>
           </div>
         </div>
       </nav>
 
       {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-[1000] bg-black/98 backdrop-blur-2xl flex flex-col items-center justify-center space-y-10">
-          <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-8 text-white"><Icons.X /></button>
+        <div className="fixed inset-0 z-[1000] bg-black/98 backdrop-blur-2xl flex flex-col items-center justify-center space-y-10" role="dialog" aria-modal="true">
+          <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-8 text-white" aria-label="Close Mobile Menu"><Icons.X /></button>
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="text-3xl font-serif italic text-white" onClick={() => setIsMenuOpen(false)}>{link.name}</a>
           ))}
           <div className="flex gap-8 pt-4">
-            <a href={CONFIG.instagramUrl} target="_blank" className="text-white/40"><Icons.Instagram /></a>
-            <a href={CONFIG.yelpUrl} target="_blank" className="text-white/40"><Icons.Yelp /></a>
+            <a href={CONFIG.instagramUrl} target="_blank" className="text-white/40" aria-label="Follow us on Instagram"><Icons.Instagram /></a>
+            <a href={CONFIG.yelpUrl} target="_blank" className="text-white/40" aria-label="View our Yelp Reviews"><Icons.Yelp /></a>
           </div>
         </div>
       )}
 
-      {/* HERO SECTION */}
-      <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[72px] lg:pt-0">
-        <div className="w-full h-[75vh] sm:h-[85vh] lg:absolute lg:inset-0 z-0">
+      <main>
+        {/* HERO SECTION */}
+        <header className="relative w-full flex flex-col lg:block lg:h-[100svh] min-h-[500px] bg-black overflow-hidden pt-[72px] lg:pt-0">
+          <div className="w-full h-[75vh] sm:h-[85vh] lg:absolute lg:inset-0 z-0">
+            <img 
+              src={ASSETS.heroLady} 
+              className="w-full h-full object-cover object-[center_35%]"
+              alt="Artistic hair styling result at Salon Paloma"
+              loading="eager"
+            />
+            <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
+          </div>
+
+          <div className="relative lg:absolute lg:inset-0 z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 flex items-center h-auto lg:h-full py-12 lg:py-0 bg-[#0A0A0A] lg:bg-transparent">
+            <div className="max-w-xl border-l border-stone-800 lg:border-white/10 pl-6 md:pl-12">
+              <h1 className="text-4xl sm:text-5xl lg:text-[72px] leading-[0.9] font-serif italic mb-6 text-white">
+                Elevated <br /> 
+                <span className="text-stone-400">Artistry.</span>
+              </h1>
+              <p className="max-w-sm text-stone-300 text-sm md:text-base font-light leading-relaxed mb-10">
+                Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
+              </p>
+              <a href={CONFIG.bookingUrl} target="_blank" className="group inline-flex items-center gap-6 text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-black text-white hover:text-stone-400 transition-all border-b border-white/10 pb-2 hover:border-white">
+                Reserve Experience 
+                <Icons.ArrowRight />
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* PHILOSOPHY */}
+        <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
+              <img src={ASSETS.philosophyImg} alt="Architectural hair styling stations at Salon Paloma" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" loading="lazy" />
+            </div>
+            <div className="space-y-10">
+              <h2 className="text-2xl md:text-4xl font-serif italic text-white leading-tight">The Unified Collective.</h2>
+              <p className="text-stone-300 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
+              <p className="text-stone-400 font-light leading-relaxed">
+                At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
+        <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
+          <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" loading="lazy" />
+          </div>
+          <div className="max-w-[1800px] mx-auto relative z-10">
+            <h2 className="text-3xl md:text-5xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
+              {ASSETS.serviceMenu.map((cat, i) => (
+                <div key={i} className="relative group overflow-hidden min-h-[500px] flex flex-col items-center justify-between text-center p-12 bg-[#0F0F0F]">
+                  <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-[0.12] group-hover:opacity-25 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" loading="lazy" />
+                  <div className="relative z-10 w-full h-full flex flex-col items-center justify-between">
+                    <h3 className="text-xl md:text-2xl font-serif italic text-white tracking-widest uppercase mb-8">
+                      {cat.category}
+                    </h3>
+                    <ul className="space-y-4 mb-10 text-stone-200 font-light text-sm md:text-base">
+                      {cat.items.map((it) => <li key={it}>{it}</li>)}
+                    </ul>
+                    <a href={CONFIG.bookingUrl} target="_blank" className="flex items-center text-[9px] tracking-widest uppercase font-bold text-stone-300 group-hover:text-white transition-all">
+                      Consultation <Icons.ChevronRight />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* EXPERIENCE */}
+        <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
+          <div className="max-w-[1800px] mx-auto">
+            <div className="flex flex-col items-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-serif italic text-white text-center">Voices.</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {ASSETS.testimonials.map((review, i) => (
+                <div key={i} className="bg-white/[0.02] p-8 md:p-12 border border-white/5 hover:bg-white/[0.04] transition-all duration-700">
+                  <StarRating />
+                  <p className="text-stone-300 font-light text-base md:text-lg leading-relaxed italic mb-10">"{review.text}"</p>
+                  <div>
+                    <p className="text-white text-lg font-serif italic">{review.name}</p>
+                    <p className="text-stone-400 text-[9px] tracking-[0.2em] uppercase font-bold">{review.location} • {review.date}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase font-bold text-stone-300 hover:text-white transition-all group" aria-label="View more reviews on Yelp">
+                <Icons.Yelp />
+                View all reviews on Yelp
+                <div className="w-8 h-[1px] bg-stone-700 transition-all group-hover:w-12 group-hover:bg-white"></div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* TEAM */}
+        <section id="team" className="py-16 md:py-28 bg-[#0F0F0F] px-6 border-t border-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-xl md:text-3xl font-serif italic text-white text-center mb-16">The Collective.</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+              {ASSETS.team.map((member) => (
+                <div key={member.id} className="group">
+                  <div className="aspect-[3/4] mb-6 bg-stone-900 border border-white/5 overflow-hidden flex items-center justify-center relative">
+                    <span className="text-white/5 text-6xl italic font-serif group-hover:scale-110 transition-transform duration-700">P</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-serif italic text-white">{member.name}</h3>
+                  <p className="text-[8px] tracking-[0.3em] uppercase font-black text-stone-400 mb-4">{member.role}</p>
+                  <p className="text-stone-300 text-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">{member.bio}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT SECTION */}
+        <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
           <img 
-            src={ASSETS.heroLady} 
-            className="w-full h-full object-cover object-[center_35%]"
-            alt="Salon Paloma"
-            loading="eager"
+            src={ASSETS.contactImg} 
+            className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
+            alt="Interior of Salon Paloma reception" 
+            loading="lazy"
           />
-          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
-        </div>
-
-        <div className="relative lg:absolute lg:inset-0 z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 flex items-center h-auto lg:h-full py-12 lg:py-0 bg-[#0A0A0A] lg:bg-transparent">
-          <div className="max-w-xl border-l border-stone-800 lg:border-white/10 pl-6 md:pl-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-[72px] leading-[0.9] font-serif italic mb-6 text-white">
-              Elevated <br /> 
-              <span className="text-stone-500">Artistry.</span>
-            </h1>
-            <p className="max-w-sm text-stone-400 text-sm md:text-base font-light leading-relaxed mb-10">
-              Manhattan precision meets San Carlos intimacy. A sanctuary for those who view hair as a living canvas.
-            </p>
-            <a href={CONFIG.bookingUrl} target="_blank" className="group inline-flex items-center gap-6 text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-black text-white hover:text-stone-400 transition-all border-b border-white/10 pb-2 hover:border-white">
-              Reserve Experience 
-              <Icons.ArrowRight />
-            </a>
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-[60px] font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+              <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
+              <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
+            </div>
           </div>
-        </div>
-      </header>
-
-      {/* PHILOSOPHY */}
-      <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-          <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
-            <img src={ASSETS.philosophyImg} alt="Salon Paloma Artistry" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" loading="lazy" />
-          </div>
-          <div className="space-y-10">
-            <h3 className="text-2xl md:text-4xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
-            <p className="text-stone-400 font-light text-lg border-l border-stone-800 pl-8 italic">Consistency is the truest mark of luxury.</p>
-            <p className="text-stone-500 font-light leading-relaxed">
-              At Salon Paloma, we cultivate a signature standard of excellence. Every stylist is meticulously trained in the Paloma Standard, ensuring your experience is intentional and unparalleled from chair to reveal.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-          <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" loading="lazy" />
-        </div>
-        <div className="max-w-[1800px] mx-auto relative z-10">
-          <h3 className="text-3xl md:text-5xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
-            {ASSETS.serviceMenu.map((cat, i) => (
-              <div key={i} className="relative group overflow-hidden min-h-[500px] flex flex-col items-center justify-between text-center p-12 bg-[#0F0F0F]">
-                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-[0.12] group-hover:opacity-25 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" loading="lazy" />
-                <div className="relative z-10 w-full h-full flex flex-col items-center justify-between">
-                  <h4 className="text-xl md:text-2xl font-serif italic text-white tracking-widest uppercase mb-8">
-                    {cat.category}
-                  </h4>
-                  <ul className="space-y-4 mb-10 text-stone-300 font-light text-sm md:text-base">
-                    {cat.items.map((it) => <li key={it}>{it}</li>)}
-                  </ul>
-                  <a href={CONFIG.bookingUrl} target="_blank" className="flex items-center text-[9px] tracking-widest uppercase font-bold text-stone-400 group-hover:text-white transition-all">
-                    Consultation <Icons.ChevronRight />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* EXPERIENCE - REFINED HEADING AND REMOVED CIRCLE IMAGE */}
-      <section id="experience" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
-        <div className="max-w-[1800px] mx-auto">
-          <div className="flex flex-col items-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-serif italic text-white text-center">Voices.</h3>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {ASSETS.testimonials.map((review, i) => (
-              <div key={i} className="bg-white/[0.02] p-8 md:p-12 border border-white/5 hover:bg-white/[0.04] transition-all duration-700">
-                <StarRating />
-                <p className="text-stone-400 font-light text-base md:text-lg leading-relaxed italic mb-10">"{review.text}"</p>
-                <div>
-                  <p className="text-white text-lg font-serif italic">{review.name}</p>
-                  <p className="text-stone-600 text-[9px] tracking-[0.2em] uppercase font-bold">{review.location} • {review.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-center">
-            <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase font-bold text-stone-500 hover:text-white transition-all group">
-              <Icons.Yelp />
-              View all reviews on Yelp
-              <div className="w-8 h-[1px] bg-stone-800 transition-all group-hover:w-12 group-hover:bg-white"></div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* TEAM */}
-      <section id="team" className="py-16 md:py-28 bg-[#0F0F0F] px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-xl md:text-3xl font-serif italic text-white text-center mb-16">The Collective.</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {ASSETS.team.map((member) => (
-              <div key={member.id} className="group">
-                <div className="aspect-[3/4] mb-6 bg-stone-900 border border-white/5 overflow-hidden flex items-center justify-center relative">
-                   <span className="text-white/5 text-6xl italic font-serif group-hover:scale-110 transition-transform duration-700">P</span>
-                </div>
-                <h4 className="text-xl md:text-2xl font-serif italic text-white">{member.name}</h4>
-                <p className="text-[8px] tracking-[0.3em] uppercase font-black text-stone-600 mb-4">{member.role}</p>
-                <p className="text-stone-500 text-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT SECTION */}
-      <section id="contact" className="group contact-reveal relative py-32 md:py-48 px-6 bg-black flex items-center justify-center text-center overflow-hidden">
-        <img 
-          src={ASSETS.contactImg} 
-          className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
-          alt="Reception Sanctuary" 
-          loading="lazy"
-        />
-        <div className="relative z-10">
-          <h2 className="text-3xl md:text-[60px] font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
-            <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* FOOTER */}
       <footer className="bg-black pt-32 pb-16 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-16">
           {/* COLUMN 1: MAP */}
           <div className="space-y-8">
-            <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Find Us</h4>
+            <h3 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/60 border-b border-white/5 pb-4">Find Us</h3>
             <div className="w-full aspect-video bg-stone-900 overflow-hidden border border-white/5">
                <iframe
-                  title="Map" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
+                  title="Google Map location of Salon Paloma" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
                   width="100%" height="100%" style={{ border: 0 }}
                   loading="lazy"
                 ></iframe>
@@ -289,8 +298,8 @@ const App = () => {
           
           {/* COLUMN 2: HOURS */}
           <div className="space-y-8">
-            <h4 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/40 border-b border-white/5 pb-4">Studio Hours</h4>
-            <ul className="space-y-4 text-[11px] md:text-sm font-light text-stone-500 uppercase tracking-wider">
+            <h3 className="text-[9px] tracking-[0.5em] uppercase font-bold text-white/60 border-b border-white/5 pb-4">Studio Hours</h3>
+            <ul className="space-y-4 text-[11px] md:text-sm font-light text-stone-300 uppercase tracking-wider">
                {[
                  { d: "Monday", h: "Closed", c: true },
                  { d: "Tuesday", h: "10:00 AM — 5:00 PM" },
@@ -302,7 +311,7 @@ const App = () => {
                ].map((item, idx) => (
                  <li key={idx} className="flex justify-between border-b border-stone-900/30 pb-2">
                    <span>{item.d}</span>
-                   <span className={item.c ? "text-red-950 font-black" : "text-white"}>{item.h}</span>
+                   <span className={item.c ? "text-red-600 font-bold" : "text-white"}>{item.h}</span>
                  </li>
                ))}
              </ul>
@@ -311,16 +320,16 @@ const App = () => {
           {/* COLUMN 3: CONTACT INFORMATION */}
           <div className="space-y-8">
             <div className="text-white text-3xl font-serif italic uppercase tracking-wider">Salon Paloma</div>
-            <p className="text-stone-400 text-sm leading-relaxed">{CONFIG.address}</p>
+            <p className="text-stone-300 text-sm leading-relaxed">{CONFIG.address}</p>
             <p className="text-white font-bold">{CONFIG.displayPhone}</p>
-            <div className="flex gap-6 text-stone-600">
-              <a href={CONFIG.instagramUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Instagram /></a>
-              <a href={CONFIG.yelpUrl} target="_blank" className="hover:text-white transition-colors"><Icons.Yelp /></a>
+            <div className="flex gap-6 text-stone-400">
+              <a href={CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Follow Salon Paloma on Instagram"><Icons.Instagram /></a>
+              <a href={CONFIG.yelpUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Review Salon Paloma on Yelp"><Icons.Yelp /></a>
             </div>
           </div>
         </div>
         
-        <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.3em] uppercase font-bold text-stone-800">
+        <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[8px] tracking-[0.3em] uppercase font-bold text-stone-600">
            <p>© 2024 Salon Paloma. All Rights Reserved.</p>
            <p>San Carlos, California</p>
         </div>
