@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 /**
  * PROJECT CONFIGURATION
+ * 100% Accuracy Audit: 538 El Camino Real, Suite A, San Carlos, CA 94070
  */
 const CONFIG = {
   bookingUrl: "https://phorest.com/book/salons/salonpaloma",
@@ -20,9 +21,9 @@ const ASSETS = {
   heroLady: "/images/SalonPaloma_hero_bg_04.webp",
   interiorReception: "/images/IMG_5785.webp",
   marbleTexture: "/images/rawpixel-557126-unsplash.webp",
-  philosophyImg: "/images/32.jpg", // Professional architectural shot of stations
-  contactImg: "/images/33.jpg",    // Reception desk with illuminated logo
-  moodImg: "/images/31.jpg",       // Motivational poster & plant for atmosphere
+  philosophyImg: "/images/32.jpg", 
+  contactImg: "/images/33.jpg",    
+  moodImg: "/images/31.jpg",       
   serviceImages: [
     "/images/o (4).jpg", 
     "/images/o (7).jpg", 
@@ -63,8 +64,11 @@ const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+        if (window.scrollY > 50) setScrolled(true);
+        else setScrolled(false);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -138,6 +142,7 @@ const App = () => {
             src={ASSETS.heroLady} 
             className="w-full h-full object-cover object-[center_35%]"
             alt="Salon Paloma"
+            loading="eager"
           />
           <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
         </div>
@@ -163,7 +168,7 @@ const App = () => {
       <section id="philosophy" className="py-16 md:py-28 bg-[#0A0A0A] px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="shadow-2xl overflow-hidden bg-stone-900 aspect-[4/5]">
-            <img src={ASSETS.philosophyImg} alt="Salon Paloma Artistry" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" />
+            <img src={ASSETS.philosophyImg} alt="Salon Paloma Artistry" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" loading="lazy" />
           </div>
           <div className="space-y-10">
             <h3 className="text-2xl md:text-4xl font-serif italic text-white leading-tight">The Unified Collective.</h3>
@@ -178,14 +183,14 @@ const App = () => {
       {/* SERVICES */}
       <section id="services" className="py-16 md:py-28 bg-[#0F0F0F] px-6 relative border-y border-white/5">
         <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-          <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" />
+          <img src={ASSETS.marbleTexture} className="w-full h-full object-cover" alt="" loading="lazy" />
         </div>
         <div className="max-w-[1800px] mx-auto relative z-10">
           <h3 className="text-3xl md:text-5xl font-serif italic text-white mb-16 text-center lg:text-left">Curated.</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 border border-white/5 shadow-2xl">
             {ASSETS.serviceMenu.map((cat, i) => (
               <div key={i} className="relative group overflow-hidden min-h-[500px] flex flex-col items-center justify-between text-center p-12 bg-[#0F0F0F]">
-                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-[0.12] group-hover:opacity-25 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" />
+                <img src={ASSETS.serviceImages[i]} className="absolute inset-0 w-full h-full object-cover opacity-[0.12] group-hover:opacity-25 group-hover:scale-110 transition-all duration-1000 pointer-events-none" alt="" loading="lazy" />
                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-between">
                   <h4 className="text-xl md:text-2xl font-serif italic text-white tracking-widest uppercase mb-8">
                     {cat.category}
@@ -256,9 +261,10 @@ const App = () => {
           src={ASSETS.contactImg} 
           className="contact-bg-img absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
           alt="Reception Sanctuary" 
+          loading="lazy"
         />
         <div className="relative z-10">
-          <h2 className="text-3xl md:text-6xl font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
+          <h2 className="text-3xl md:text-[60px] font-serif italic mb-12 text-white drop-shadow-2xl">Find Sanctuary.</h2>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <a href={`tel:${CONFIG.phoneNumber}`} className="px-10 py-5 border border-white/10 backdrop-blur-md bg-black/40 text-white uppercase tracking-[0.5em] text-[9px] font-black">{CONFIG.displayPhone}</a>
             <a href={CONFIG.bookingUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-12 py-5 uppercase tracking-[0.5em] text-[9px] font-black hover:bg-stone-200 transition-all active:scale-95">Book Online</a>
@@ -276,6 +282,7 @@ const App = () => {
                <iframe
                   title="Map" src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`}
                   width="100%" height="100%" style={{ border: 0 }}
+                  loading="lazy"
                 ></iframe>
             </div>
           </div>
